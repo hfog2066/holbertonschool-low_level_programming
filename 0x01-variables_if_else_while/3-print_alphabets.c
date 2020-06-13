@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <type.h>
 #include <stdio.h>
 /**
  *main -show alphabet
