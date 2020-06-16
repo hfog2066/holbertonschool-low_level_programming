@@ -10,8 +10,12 @@
  */
 int print_alphabet(void)
 {
-char *c = "abcdefghijklmnopqrstuvwyz";
-while (*c)
-_putchar(*(c++));
-_putchar('\n');
+int letter = 'a';
+while (letter <= 'z')
+{
+_putchar(letter);
+letter++;
 }
+_putchar('\n'); 
+}
+
