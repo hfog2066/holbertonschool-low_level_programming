@@ -11,7 +11,7 @@ int main(void)
 {
 char *c = "Holberton";
 while (*c)
-putchar(*(c++));
-putchar('\n');
+_putchar(*(c++));
+_putchar('\n');
 return (0);
 }
