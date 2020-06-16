@@ -8,10 +8,8 @@
  */
 void print_alphabet(void)
 {
-int i;
-for (i = 97; i <= 122; i++)
-{
-_putchar(i);
-}
+char *c = "abcdefghijklmnopqrstuvwxyz";
+while (*c)
+_putchar(*(c++));
 _putchar('\n');
-}
+} 
