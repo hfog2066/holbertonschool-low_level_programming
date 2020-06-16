@@ -5,10 +5,10 @@
  *Description: print alphabet in lowercase
  *followed by a line with _putchar
  *
- *Return: 0 at the end of routine
+ *Return: void
  *
  */
-int main(void)
+int print_alphabet(void)
 {
 char *c = "abcdefghijklmnopqrstuvwyz";
 while (*c)
