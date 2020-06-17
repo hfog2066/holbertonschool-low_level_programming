@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  *main - show absolute value
  *
@@ -7,12 +8,15 @@
  *
  *Return: 0
  */
-int _abs(int n);
+int _abs(int i);
 {
-if (n < 0)
+if (i < 0)
 {
-return (~n + 1);
+i = i * -1;
+return (i);
 }
 else
-return (n);
+{
+return (i);
+}
 }
