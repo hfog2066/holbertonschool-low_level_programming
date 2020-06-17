@@ -8,16 +8,10 @@
  *
  *Return: 0
  */
-int _abs(int)
+int _abs(int num)
 {
-int i;
-if (i < 0)
-{
-i = i * -1;
-return (i);
-}
+if (num < 0)
+return (num * -1);
 else
-{
-return (i);
-}
-}
+return (num);
+} 
