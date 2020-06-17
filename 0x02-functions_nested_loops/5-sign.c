@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- *main - print sign
+ * print_sign - print sign number
  *
  *Description: print sign of a number.
  *
