@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *main - show 0, 1
+ * _isalpha - show 0, 1
  *
  *Description: check alphabetic character.
  *
