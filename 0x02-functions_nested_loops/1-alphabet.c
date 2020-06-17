@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *main - show alphabet
+ *print_alphabet - show alphabet
  *
  *Description: print_alphabet in lowercase.
  *
