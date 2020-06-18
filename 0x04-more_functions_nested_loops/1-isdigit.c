@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * _isdigit - print 1 if c is a digit.
- *
+ * @c: character
  * Return: 0
  */
 int _isdigit(int c)
