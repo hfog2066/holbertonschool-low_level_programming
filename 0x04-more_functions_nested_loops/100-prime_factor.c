@@ -8,18 +8,17 @@
  */
 int main(void)
 {
-	long int i;
-	long int n = 612852475143;
+	long int n, pn;
 
-	for (i = 2; i <= n; i++)
+	n = 612852475143;
+	for (pn = 2; pn <= n; pn++)
 	{
-		if (n % i == 0)
-			n = n / i;
+		if (n % pn == 0)
 		{
-			n /= i;
-			i++;
+			n /= pn;
+			pn--;
 		}
 	}
-	printf("%ld\n", i);
+	printf("%ld\n", pn);
 	return (0);
 }
