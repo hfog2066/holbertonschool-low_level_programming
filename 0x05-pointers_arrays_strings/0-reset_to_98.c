@@ -1,12 +1,13 @@
 #include "holberton.h"
+
 /**
- *reset_to_98 - takes pointer to int
- *@n: int
+ *reset_to_98 - takes pointer to int.
+ *@n: input integer.
  *
- *Return: void.
+ *Return: Always 0.
  */
 
-int reset_to_98(int *n)
+void reset_to_98(int *n)
 {
 	*n = 98;
 }
