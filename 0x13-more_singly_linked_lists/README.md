@@ -1,4 +1,4 @@
-<h1>This repsitory contains 0x13. C - More singly linked lists, tasks for Holberton School.</h1>
+<h1>This repository contains 0x13. C - More singly linked lists, tasks for Holberton School.</h1>
 <br>
 <h4>0. Print list.</h4>
 <h4>1. List length.</h4>
