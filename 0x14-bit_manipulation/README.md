@@ -1,4 +1,4 @@
-<h1>This repository contains a 0x14. C - Bit manipulation, tasks for Holberton School.</h1>
+<h1>This repository contains 0x14. C - Bit manipulation, tasks for Holberton School.</h1>
 <br>
 <hr>
 <h4>0. 0 Write a function that converts a binary number to an unsigned int. </h4>
