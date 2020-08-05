@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  *error_file - check file if is opened.
@@ -32,7 +33,7 @@ void error_file(int file_from, int file_to, char *argv[])
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
-	ssize_t nchars, nwrite;
+	ssize_t nchars, nwr;
 	char buf[1024];
 
 	if (argc != 3)
@@ -51,8 +52,8 @@ int main(int argc, char *argv[])
 		nchars = read(file_from, buf, 1024);
 		if (nchars == -1)
 			error_file(-1, 0, argv);
-		nwrite = write(file_to, buf, nchars);
-		if (nwrite == -1)
+		nwr = write(file_to, buf, nchars);
+		if (nwr == -1)
 			error_file(0, -1, argv);
 	}
 
