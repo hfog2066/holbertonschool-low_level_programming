@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 
 /**
  *error_file - check file if is opened.
