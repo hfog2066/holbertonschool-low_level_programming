@@ -3,9 +3,9 @@
 
 /**
  *error_file - check file if is opened.
- *@file_from: file in.
- *@file_to: file out.
- *@argv: arguments.
+ *@file_from: file_from.
+ *@file_to: file_to.
+ *@argv: arguments vector.
  *Return: no return.
  */
 
@@ -27,7 +27,7 @@ void error_file(int file_from, int file_to, char *argv[])
  *main - check code.
  *@argc: number arguments.
  *@argv: vector arguments.
- *Return: 0.
+ *Return: Always 0.
  */
 
 int main(int argc, char *argv[])
