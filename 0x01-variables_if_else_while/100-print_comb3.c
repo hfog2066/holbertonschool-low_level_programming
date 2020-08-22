@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int i, e;
+	int i, j;
 
 	i = 48;
 	j = 48;
@@ -18,7 +18,7 @@ int main(void)
 		i = 48;
 		while (i < 58)
 		{
-			if (j != 1 && e < i)
+			if (j != 1 && j < i)
 			{
 
 				putchar(j);
