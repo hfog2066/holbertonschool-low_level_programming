@@ -24,7 +24,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		bg = c2;
 	if (size_r <= bg + 1)
 		return (0);
-	r[bg +1] = '\0';
+	r[bg + 1] = '\0';
 	c1--, c2--, size_r--;
 	dr1 = *(n1 + c1) - 48, dr2 = *(n2 + c2) - 48;
 	while (bg >= 0)
