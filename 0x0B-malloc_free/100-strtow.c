@@ -27,7 +27,7 @@ void ch_free_grid(int **grid, unsigned int height);
  *Return: pointer of an array of integers
  */
 
-char **strtow(char *str);
+char **strtow(char *str)
 {
 	char **aout;
 	unsigned int c, height, i, j, a1;
