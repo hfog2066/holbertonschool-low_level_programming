@@ -9,7 +9,7 @@
  *Return: no return.
  */
 
-void ch_free_grid(int **grid, unsigned int height)
+void ch_free_grid(char **grid, unsigned int height)
 {
 	if (grid != NULL && height != 0)
 	{
