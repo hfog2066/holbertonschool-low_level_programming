@@ -1,4 +1,4 @@
-<h1>This repository contains 0x18.C-Dynamic libraries, tasks for Hoberton School.</h1>
+<h1>This repository contains 0x18.C-Dynamic libraries, tasks for Holberton School.</h1>
 <br>
 <hr>
 <h4>0. A library is not a luxury but one of the necessities of life.</h4>
