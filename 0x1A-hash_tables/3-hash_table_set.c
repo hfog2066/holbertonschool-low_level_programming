@@ -62,7 +62,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	return (1);
-}#include "hash_tables.h"
+}
+
+#include "hash_tables.h"
 
 /**
  * add_n_hash - adds a node at the beginning of a hash at a given index
