@@ -1,54 +1,129 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - function that adds an element to hash table
- * @ht: hash table to update
- * @key: key
- * @value: value of key
- * Return: updated table
+ * add_n_hash - adds a node at the beginning of a hash at a given index
+ *
+ * @head: head of the hash linked list
+ * @key: key of the hash
+ * @value: value to store
+ * Return: head of the hash
+ */
+hash_node_t *add_n_hash(hash_node_t **head, const char *key, const char *value)
+{
+	hash_node_t *tmp;
+
+	tmp = *head;
+
+	while (tmp != NULL)
+	{
+		if (strcmp(key, tmp->key) == 0)
+		{
+			free(tmp->value);
+			tmp->value = strdup(value);
+			return (*head);
+		}
+		tmp = tmp->next;
+	}
+
+	tmp = malloc(sizeof(hash_node_t));
+
+	if (tmp == NULL)
+		return (NULL);
+
+	tmp->key = strdup(key);
+	tmp->value = strdup(value);
+	tmp->next = *head;
+	*head = tmp;
+
+	return (*head);
+}
+
+/**
+ * hash_table_set - adds a hash (key, value) to a given hash table
+ *
+ * @ht: pointer to the hash table
+ * @key: key of the hash
+ * @value: value to store
+ * Return: 1 if successes, 0 if fails
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int idx = 0;
-	char *temp_val = NULL;
-	hash_node_t *temp = NULL;
-	hash_node_t *new = NULL;
+	unsigned long int k_index;
 
-	if (ht == NULL || ht->array == NULL || value == NULL)
+	if (ht == NULL)
 		return (0);
 
-	if (strlen(key) == 0 || key == NULL)
+	if (key == NULL || *key == '\0')
 		return (0);
-	temp_val = strdup(value);
-	if (temp_val == NULL)
-		return (0);
-	idx = key_index((unsigned char *)key, ht->size);
 
-	/* Collision checker */
-	temp = ht->array[idx];
-	while (temp)
+	k_index = key_index((unsigned char *)key, ht->size);
+
+	if (add_n_hash(&(ht->array[k_index]), key, value) == NULL)
+		return (0);
+
+	return (1);
+}#include "hash_tables.h"
+
+/**
+ * add_n_hash - adds a node at the beginning of a hash at a given index
+ *
+ * @head: head of the hash linked list
+ * @key: key of the hash
+ * @value: value to store
+ * Return: head of the hash
+ */
+hash_node_t *add_n_hash(hash_node_t **head, const char *key, const char *value)
+{
+	hash_node_t *tmp;
+
+	tmp = *head;
+
+	while (tmp != NULL)
 	{
-		if (strcmp(temp->key, key) == 0)
+		if (strcmp(key, tmp->key) == 0)
 		{
-			free(temp->value);
-			temp->value = temp_val;
-			temp->value = strdup(value);
-			free(temp_val);
-			return (1);
+			free(tmp->value);
+			tmp->value = strdup(value);
+			return (*head);
 		}
-		temp = temp->next;
+		tmp = tmp->next;
 	}
 
-	/* If no collision, insert node */
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
-	{
-		free(new);
+	tmp = malloc(sizeof(hash_node_t));
+
+	if (tmp == NULL)
+		return (NULL);
+
+	tmp->key = strdup(key);
+	tmp->value = strdup(value);
+	tmp->next = *head;
+	*head = tmp;
+
+	return (*head);
+}
+
+/**
+ * hash_table_set - adds a hash (key, value) to a given hash table
+ *
+ * @ht: pointer to the hash table
+ * @key: key of the hash
+ * @value: value to store
+ * Return: 1 if successes, 0 if fails
+ */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+{
+	unsigned long int k_index;
+
+	if (ht == NULL)
 		return (0);
-	}
-	new->key = strdup(key);
-	new->value = temp_val;
-	new->next = ht->array[idx];
-	ht->array[idx] = new;
+
+	if (key == NULL || *key == '\0')
+		return (0);
+
+	k_index = key_index((unsigned char *)key, ht->size);
+
+	if (add_n_hash(&(ht->array[k_index]), key, value) == NULL)
+		return (0);
+
 	return (1);
 }
